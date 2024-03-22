@@ -1,0 +1,26 @@
+/* kasa-home.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff; /* Couleur de fond de la barre de navigation */
+ 
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333; /* Couleur des liens */
+}
+
+.logo svg {
+  width: 150px; /* Largeur du logo */
+  height: auto; /* Hauteur automatique pour conserver les proportions */
+}
