@@ -1,0 +1,49 @@
+/* banner.css */
+.banner-container {
+  position: relative;
+  width: 80%; /* Réduction de la largeur de la bannière */
+  height: 200px; /* Réduction de la hauteur de la bannière */
+  overflow: hidden;
+  border-radius: 15px; /* Coins arrondis */
+  background: rgba(0, 0, 0, 0.8); /* Couleur de fond avec une opacité plus élevée */
+  margin: 20px auto; /* Ajout d'un espace autour de la bannière */
+  background-image: url('../assets/Banner-Img.jpg');
+  background-size: 100%; /* Ajustement de la taille de l'image pour remplir le conteneur sans duplication */
+  background-position: bottom center; /* Positionnement de l'image centrée horizontalement et au bas */
+}
+
+
+.banner-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+}
+
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 36px; /* Taille du titre réduite */
+  font-weight: bold;
+  margin-bottom: 10px; /* Espace entre le titre et le paragraphe */
+  color: #FFF; /* Couleur du texte */
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Ombre du texte */
+  font-family: Montserrat;
+  font-style: normal;
+  line-height: 1; /* Espacement des lignes */
+}
+
+.banner-text p {
+  font-size: 14px; /* Taille du paragraphe */
+}

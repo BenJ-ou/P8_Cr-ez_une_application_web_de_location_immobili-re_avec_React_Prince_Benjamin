@@ -4,11 +4,13 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import "./css/kasa-navbar.css";
-import "./css/kasa-footer.css";
+import "./css/navbar.css";
+import "./css/footer.css";
+import "./css/banner.css";
 import KasaHome from "./pages/kasa-home";
 import ErrorPage from "./pages/error-page";
-import KasaFooter from "./component/kasa-footer";
+import KasaFooter from "./component/footer";
+
 
 const router = createBrowserRouter([
   {
