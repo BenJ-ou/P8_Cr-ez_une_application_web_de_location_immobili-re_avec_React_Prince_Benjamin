@@ -7,7 +7,6 @@
   border-radius: 15px; /* Coins arrondis */
   background: rgba(0, 0, 0, 0.8); /* Couleur de fond avec une opacité plus élevée */
   margin: 20px auto; /* Ajout d'un espace autour de la bannière */
-  background-image: url('../assets/Banner-Img.jpg');
   background-size: 100%; /* Ajustement de la taille de l'image pour remplir le conteneur sans duplication */
   background-position: bottom center; /* Positionnement de l'image centrée horizontalement et au bas */
 }

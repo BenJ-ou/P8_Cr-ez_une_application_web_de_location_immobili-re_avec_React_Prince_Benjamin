@@ -10,7 +10,7 @@ function KasaNavbar() {
       </div>
       <ul className="nav-links">
         <li><a href="/">Accueil</a></li>
-        <li><a href="/">A propos</a></li>
+        <li><a href="/about">A propos</a></li>
       </ul>
     </nav>
   );

@@ -1,0 +1,26 @@
+/* lodging.css */
+
+.lodging-page {
+    margin: 0 10%;
+}
+
+.title {
+    color: #FF6060; /* Style pour le titre en rouge */
+}
+
+.location {
+   font-size: 18px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #FF6060; /* Fond rouge */
+    color: white; /* Texte blanc */
+    padding: 5px 10px; /* Espacement autour du texte */
+    margin-right: 10px; /* Marge à droite pour espacement entre les tags */
+    border-radius: 20px; /* Bordure arrondie pour un aspect de cercle allongé */
+}

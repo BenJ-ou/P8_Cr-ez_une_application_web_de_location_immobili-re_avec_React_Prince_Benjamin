@@ -1,0 +1,46 @@
+.collapse-container {
+    cursor: pointer;
+    margin-bottom: 10px;
+    max-width: 800px;
+    align-items: center;
+    margin: 0 auto; 
+    padding: 10px;
+}
+
+.collapse-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #FF6060;
+    border-radius: 5px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.6%; 
+    height: 25px;
+}
+
+.collapse-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease; /* Ajout de la transition */
+}
+
+.collapse-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.rotate-up {
+    transform: rotate(180deg); /* Rotation vers le haut */
+}
+
+.rotate-down {
+    transform: rotate(0deg); /* Rotation vers le bas */
+}
