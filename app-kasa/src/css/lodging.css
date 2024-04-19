@@ -8,13 +8,36 @@
     color: #FF6060; /* Style pour le titre en rouge */
 }
 
+.title-container {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement uniforme des éléments */
+}
+
+.host-info {
+    display: flex;
+    align-items: center; /* Alignement vertical */
+}
+
+.host-info p {
+    color: #FF6060; /* Couleur rouge pour le nom de l'hôte */
+    margin-right: 10px; /* Espacement entre le titre et le nom de l'hôte */
+}
+
+.host-picture {
+    width: 70px; /* Taille de l'image de l'hôte */
+    height: 70px;
+    border-radius: 50%; /* Pour obtenir une image circulaire */
+}
+
 .location {
-   font-size: 18px;
+    font-size: 18px;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
+    align-items: center; /* Alignement vertical */
 }
 
 .tag {
@@ -22,5 +45,40 @@
     color: white; /* Texte blanc */
     padding: 5px 10px; /* Espacement autour du texte */
     margin-right: 10px; /* Marge à droite pour espacement entre les tags */
-    border-radius: 20px; /* Bordure arrondie pour un aspect de cercle allongé */
+    border-radius: 25px; /* Bordure arrondie plus grande */
+}
+
+.equipment {
+    display: flex; /* Afficher les équipements horizontalement */
+    flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+    margin: 2px;
+}
+
+.collapseDiv {
+    display: flex; /* Utilisation de Flexbox pour les aligner horizontalement */
+    justify-content: space-between; /* Les éléments sont espacés uniformément sur la ligne */
+    margin-top: 20px; /* Espacement entre le carousel et les collapses */
+}
+
+.star-rating {
+    position: absolute;
+    right: 210px;
+    font-size: 30px; /* Taille des étoiles augmentée */
+    color: #FF6060; /* Couleur des étoiles en rouge */
+   
+}
+
+.star {
+    cursor: pointer; /* Curseur pointer pour indiquer que les étoiles sont cliquables */
+}
+
+.star.active {
+    color: #FF6060; /* Couleur des étoiles actives en rouge */
+}
+
+@media screen and (max-width: 768px) {
+    .collapseDiv {
+        flex-direction: column; /* Passage à une disposition verticale sur les écrans plus petits */
+        align-items: center; /* Centrage des éléments sur les écrans plus petits */
+    }
 }

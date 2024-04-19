@@ -1,14 +1,18 @@
-export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ErrorImage from '../assets/404.png';
+import '../css/error.css';
 
-  return (
-    <div id="error-page">
-      <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-    </div>
-  );
-}
+const Error = () => {
+    return (
+        <section className='section_error'>
+            <img className='error_img' src={ErrorImage} alt='error 404' />
+            <p className='error_text'>Oups! La page que vous demandez n'existe pas.</p>
+            <Link className='error_link' to='/'>
+                Retourner sur la page d'accueil
+            </Link>
+        </section>
+    );
+};
+
+export default Error;

@@ -28,11 +28,18 @@ const router = createBrowserRouter([
     footer: <KasaFooter />,
   },
   {
+    path: "/errorPage",
+    element: <ErrorPage />,
+    errorElement: <ErrorPage />,
+    footer: <KasaFooter />,
+  },
+  {
     path: "/lodging/:id", // Utilisez un paramètre dynamique pour l'ID du logement
     element: <LodgingPage />,
     errorElement: <ErrorPage />,
     footer: <KasaFooter />,
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -1,7 +1,10 @@
+/* collapse.css */
+
 .collapse-container {
     cursor: pointer;
     margin-bottom: 10px;
-    max-width: 800px;
+    width: 80%; /* Largeur de 80% de la largeur de la fenêtre */
+    max-width: 900px; /* Largeur maximale par défaut */
     align-items: center;
     margin: 0 auto; 
     padding: 10px;
@@ -44,3 +47,10 @@
 .rotate-down {
     transform: rotate(0deg); /* Rotation vers le bas */
 }
+
+.equipment {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    margin: 2px !important;
+}
+

@@ -1,0 +1,25 @@
+.section_error {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement */
+    justify-content: center; /* Centrer verticalement */
+    height: 90vh; /* Pour occuper toute la hauteur de la fenêtre */
+}
+
+.error_img {
+    margin-bottom: 20px; /* Espacement en bas de l'image */
+}
+
+.error_text {
+    text-align: center;
+    margin-bottom: 50px; 
+    color: #FF6060; /* Couleur du texte du lien */
+    font-weight: 500;
+    font-size: 31px;
+    font-style:normal;
+}
+
+.error_link {
+    font-size: small;
+    font-weight: bold;
+}
