@@ -13,6 +13,13 @@
     width: 50%; /* Utilisation de 50% de l'espace */
 }
 
+
+.name{
+    width: 100%;
+    justify-content: end;
+    display: flex;
+}
+
 .host-info {
     display: flex; /* Utilisation de Flexbox */
     align-items: center; /* Alignement vertical */
@@ -106,6 +113,13 @@
 }
 
 @media screen and (max-width: 600px) {
+
+    .name{
+        width: 100%;
+        justify-content: end;
+        display: block;
+    }
+    
 
     .collapseDiv{
         margin: 0;

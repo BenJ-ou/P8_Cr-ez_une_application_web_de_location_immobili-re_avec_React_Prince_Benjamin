@@ -45,14 +45,14 @@ function LodgingPage() {
            
             <div className="container">
                 <div className="host-info">
-                    <div>
+                    <div className='name'>
                     <p className="first-name">{host.name.split(' ')[0]}</p>
                     <p className="last-name">{host.name.split(' ')[1]}</p>
                     </div>
                     <img src={host.picture} alt="Host" className="host-picture" />
                 </div>
                 {/* Affiche le composant StarRating avec la note actuelle */}
-                <StarRating class="star-rating" initialRating={rating} /> 
+                <StarRating className="star-rating" initialRating={rating} /> 
              </div>
 
             <div className="collapseDiv">
