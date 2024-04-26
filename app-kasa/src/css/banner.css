@@ -1,15 +1,17 @@
 /* banner.css */
 .banner-container {
   position: relative;
-  width: 80%; /* Réduction de la largeur de la bannière */
-  height: 200px; /* Réduction de la hauteur de la bannière */
+  width: 90%;
+  height: 250px;
   overflow: hidden;
-  border-radius: 15px; /* Coins arrondis */
-  background: rgba(0, 0, 0, 0.8); /* Couleur de fond avec une opacité plus élevée */
-  margin: 20px auto; /* Ajout d'un espace autour de la bannière */
-  background-size: 100%; /* Ajustement de la taille de l'image pour remplir le conteneur sans duplication */
-  background-position: bottom center; /* Positionnement de l'image centrée horizontalement et au bas */
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 20px auto;
+  background-size: cover; /* Utilisez 'cover' pour ajuster l'image à la taille de la bannière */
+  background-position: center; /* Affiche la partie supérieure de l'image */
+  margin-bottom: 30px !important;
 }
+
 
 
 .banner-container::before {
@@ -19,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.42);
 }
 
 
@@ -46,3 +48,26 @@
 .banner-text p {
   font-size: 14px; /* Taille du paragraphe */
 }
+
+
+@media (max-width: 680px) {
+  .banner-container {
+    height: 135px; /* Réduire la hauteur de la bannière pour les appareils mobiles */
+    margin-bottom: 25px !important;
+  }
+
+  .banner-text {
+    left: 40%; /* Décaler le texte vers la gauche */
+    text-align: left; /* Aligner le texte à gauche */
+  }
+
+  .banner-text h1 {
+    font-size: 18px; /* Réduire la taille du titre pour le format mobile */
+  }
+
+  .banner-text p {
+    display: none; /* Masquer le paragraphe sur les appareils mobiles */
+  }
+}
+
+

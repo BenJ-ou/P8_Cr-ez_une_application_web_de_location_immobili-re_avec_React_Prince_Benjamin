@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import arrowBack from '../assets/arrow_back.png'; // Import de l'icône de flèche vers le bas
 import arrowBack2 from '../assets/arrow_back2.png'; // Import de l'icône de flèche vers le haut
 import '../css/collapse.css'; // Import du fichier CSS pour le style du composant
 
@@ -20,7 +19,7 @@ const Collapse = ({ title, content }) => {
                 {/* Titre du collapsible */}
                 <p>{title}</p>
                 {/* Icône de flèche qui tourne vers le haut ou vers le bas en fonction de l'état isOpen */}
-                <img className={`collapse-icon ${isOpen ? 'rotate-up' : 'rotate-down'}`} src={isOpen ? arrowBack2 : arrowBack} alt='collapse icon'/>
+                <img className={`collapse-icon ${isOpen ? 'rotate-up' : 'rotate-down'}`} src={isOpen ? arrowBack2 : arrowBack2} alt='collapse icon'/>
             </div>
             {/* Affiche le contenu uniquement si isOpen est true */}
             {isOpen && (

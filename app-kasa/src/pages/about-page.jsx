@@ -26,18 +26,19 @@ const collapses = [
 const AboutPage = () => {
     return (
         <>
-            <main className='main-content about-page'>
-                <div className='about-banner'>
+            <div className='about-page-container'>
+                <div className='about-banner-section'>
                     <Banner image={coverPhotoAboutPage} />
                 </div>
-                <div className='about-collapses'>
+                <div className='about-content-section'>
                     {collapses.map((collapse, index) => (
                         <Collapse key={index} title={collapse.title} content={collapse.text} />
                     ))}
                 </div>
-            </main>
+            </div>
         </>
     );
 };
 
 export default AboutPage;
+

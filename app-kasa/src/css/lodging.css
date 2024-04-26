@@ -9,14 +9,14 @@
 }
 
 .title-container {
-    display: flex;
-    align-items: center; /* Alignement vertical */
-    justify-content: space-between; /* Espacement uniforme des éléments */
+    display: inline-block; /* Affichage en ligne */
+    width: 50%; /* Utilisation de 50% de l'espace */
 }
 
 .host-info {
-    display: flex;
+    display: flex; /* Utilisation de Flexbox */
     align-items: center; /* Alignement vertical */
+    margin-bottom: 25px;
 }
 
 .host-info p {
@@ -31,7 +31,10 @@
 }
 
 .location {
-    font-size: 18px;
+    font-size: 18px;  
+    margin: 0;
+    margin-top: -15px;
+    margin-bottom: 20px;
 }
 
 .tags {
@@ -45,7 +48,10 @@
     color: white; /* Texte blanc */
     padding: 5px 10px; /* Espacement autour du texte */
     margin-right: 10px; /* Marge à droite pour espacement entre les tags */
-    border-radius: 25px; /* Bordure arrondie plus grande */
+    border-radius: 10px; /* Bordure arrondie plus grande */
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 18px;
 }
 
 .equipment {
@@ -61,11 +67,8 @@
 }
 
 .star-rating {
-    position: absolute;
-    right: 210px;
     font-size: 30px; /* Taille des étoiles augmentée */
     color: #FF6060; /* Couleur des étoiles en rouge */
-   
 }
 
 .star {
@@ -76,9 +79,98 @@
     color: #FF6060; /* Couleur des étoiles actives en rouge */
 }
 
+.container {
+    float: right; /* Aligner à droite */
+}
+
 @media screen and (max-width: 768px) {
+    .title-container {
+        width: 400px;
+    }
+    .container {
+        width: 100%; /* Prend toute la largeur sur les appareils mobiles */
+        float: none; /* Annule l'alignement à droite */
+        margin-top: 20px; /* Espacement entre les conteneurs */
+    }
     .collapseDiv {
         flex-direction: column; /* Passage à une disposition verticale sur les écrans plus petits */
         align-items: center; /* Centrage des éléments sur les écrans plus petits */
+    }  
+    
+    .host-info {
+        position: absolute;
+        right: 0;
+        margin-right: 5px;
+        margin-top: -20px;
     }
+}
+
+@media screen and (max-width: 600px) {
+
+    .collapseDiv{
+        margin: 0;
+    }
+
+    .container{
+        align-items: center;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .title-container {
+        width: 300px;
+    }
+    .title {
+        font-size: 20px; /* Réduire la taille du titre */
+        font-weight: bolder; /* Ajouter du gras au titre */
+        display: inline-block; /* Afficher le titre en ligne */
+    }
+
+    .location {
+        font-weight: 500; /* Augmenter l'épaisseur de la location */
+    }
+
+    .tag {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .star-rating {
+        position: relative; /* Annulation de la position absolue pour les étoiles */
+        right: auto; /* Annulation de la position à droite pour les étoiles */
+        font-size: 12px;
+        margin-top: 0; /* Ajuster la marge pour aligner avec host-info */
+    }
+
+    .host-info {
+        justify-content: flex-end; /* Aligner les informations sur l'hôte à droite */
+        align-items: center; /* Aligner les éléments sur la ligne en bas */
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+
+    .host-picture {
+        margin-left: 10px; /* Ajout de marge à gauche pour l'image de l'hôte */
+        width: 40px; /* Réduire la largeur de l'image de l'hôte */
+        height: 40px; /* Réduire la hauteur de l'image de l'hôte */
+        border-radius: 50%; /* Pour obtenir une image circulaire */
+        margin-top: 10px; /* Ajout de marge en haut pour l'image de l'hôte */
+      
+    }
+
+    p.first-name,
+    p.last-name {
+        display: block; /* Affichage en bloc pour passer en dessous */
+        text-align: right; /* Alignement du texte à droite */
+        margin: 0;
+        margin-top: 3px;
+    }
+
+    .collapse-container {
+       width: 100%;
+}
+
+
 }

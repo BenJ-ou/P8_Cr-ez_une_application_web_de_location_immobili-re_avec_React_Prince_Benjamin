@@ -19,25 +19,24 @@ const router = createBrowserRouter([
     path: "/",
     element: <KasaHome />,
     errorElement: <ErrorPage />,
-    footer: <KasaFooter />,
+    
   },
   {
     path: "/about",
     element: <AboutPage />,
     errorElement: <ErrorPage />,
-    footer: <KasaFooter />,
+    
   },
   {
     path: "/errorPage",
     element: <ErrorPage />,
     errorElement: <ErrorPage />,
-    footer: <KasaFooter />,
+   
   },
   {
     path: "/lodging/:id", // Utilisez un paramètre dynamique pour l'ID du logement
     element: <LodgingPage />,
     errorElement: <ErrorPage />,
-    footer: <KasaFooter />,
   },
 
 ]);

@@ -1,4 +1,3 @@
-// LodgingPage.jsx
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import accommodationsData from '../../public/logement.json';
@@ -14,10 +13,9 @@ function LodgingPage() {
     const lodging = accommodationsData.find(lodging => lodging.id === id);
     const [rating, setRating] = useState(lodging.rating); // État local pour stocker la note
 
-       if (!LodgingPage)
-         return <ErrorPage />;
-         console.log('ErroPage');
-
+    if (!lodging)
+        return <ErrorPage />;
+    
     const { title, location, tags, description, equipments, pictures, host } = lodging;
 
     const equipmentItems = equipments.map((equipment, index) => (
@@ -36,20 +34,27 @@ function LodgingPage() {
             <Carousel images={pictures} />
             <div className="title-container">
                 <h1 className="title">{title}</h1>
-                <div className="host-info">
-                    <p className="first-name">{host.name.split(' ')[0]}</p>
-                    <p className="last-name">{host.name.split(' ')[1]}</p>
-                    <img src={host.picture} alt="Host" className="host-picture" />
-                </div>
-            </div>
-            <p className="location">{location}</p>
+                <p className="location">{location}</p>
+
             <div className="tags">
                 {tags.map((tag, index) => (
                     <span key={index} className="tag">{tag}</span>
                 ))}
-                {/* Affiche le composant StarRating avec la note actuelle */}
-                <StarRating initialRating={rating} onRatingChange={handleRatingChange} />
             </div>
+            </div>
+           
+            <div className="container">
+                <div className="host-info">
+                    <div>
+                    <p className="first-name">{host.name.split(' ')[0]}</p>
+                    <p className="last-name">{host.name.split(' ')[1]}</p>
+                    </div>
+                    <img src={host.picture} alt="Host" className="host-picture" />
+                </div>
+                {/* Affiche le composant StarRating avec la note actuelle */}
+                <StarRating class="star-rating" initialRating={rating} /> 
+             </div>
+
             <div className="collapseDiv">
                 <Collapse title="Description" content={description} />
                 <Collapse title="Equipement" content={equipmentItems} />

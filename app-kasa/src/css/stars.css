@@ -1,0 +1,25 @@
+
+/* Ajoutez cette règle CSS dans votre fichier CSS ou SCSS */
+.star {
+    width: 50px; /* Réduire la largeur des étoiles */
+    height: 50px; /* Réduire la hauteur des étoiles */
+}
+
+
+svg{
+    width: 180px;
+    
+}
+
+
+@media screen and (max-width: 600px) {
+    svg{
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    svg{
+        width: 110px;
+    }
+}

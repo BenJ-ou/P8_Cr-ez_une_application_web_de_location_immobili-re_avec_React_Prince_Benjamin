@@ -1,13 +1,7 @@
-/* kasa-home.css */
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #fff; /* Couleur de fond de la barre de navigation */
-}
+/*navbar.css*/
 
+/* Style des liens de la navbar */
 .nav-links {
   list-style: none;
   display: flex;
@@ -16,10 +10,68 @@
 
 .nav-links li a {
   text-decoration: none;
-  color: #333; /* Couleur des liens */
+  color: #333; /* Couleur par défaut du texte */
+  position: relative; /* Position relative pour pouvoir positionner le soulignement */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: right; 
+  right: 50%;
+  margin-right: 20px;
 }
 
+/* Style du soulignement */
+.nav-links li a::after {
+  content: ''; /* Ajoute un contenu vide */
+  position: absolute; /* Position absolue pour le placer sous le texte */
+  left: 0; /* Début du soulignement à gauche */
+  bottom: -5px; /* Position du soulignement par rapport au texte */
+  width: 100%; /* Largeur égale à celle du texte */
+  height: 2px; /* Épaisseur du soulignement */
+  background-color: transparent; /* Couleur du soulignement transparent par défaut */
+  transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+/* Style du soulignement au survol */
+.nav-links li a:hover::after {
+  background-color: #000; /* Couleur du soulignement en noir au survol */
+}
+
+/* Style du logo */
 .logo svg {
-  width: 150px; /* Largeur du logo */
+  width: 140px; /* Largeur du logo */
   height: auto; /* Hauteur automatique pour conserver les proportions */
+  margin-left: 50px ;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff; /* Couleur de fond de la barre de navigation */
+}
+
+/* Media query pour les appareils mobiles */
+@media (max-width: 680px) {
+  .navbar{
+    margin-bottom: 5px;
+  }
+  .nav-links li a {
+    font-size: 16px; /* Réduction de la taille de la police */
+    text-align: right; /* Alignement du texte à droite */
+    margin-right: 1px; /* Augmentation de la marge droite pour déplacer le texte plus à droite */
+  }
+
+  .logo svg {
+    width: 130px; /* Réduction de la taille du logo */
+    margin-left: 20px; /* Réduction de la marge gauche */
+  }
+}
+
+@media (max-width: 380px) {
+  .logo svg {
+    width: 120px; /* Réduction de la taille du logo */
+  }
 }

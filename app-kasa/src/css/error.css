@@ -16,10 +16,37 @@
     color: #FF6060; /* Couleur du texte du lien */
     font-weight: 500;
     font-size: 31px;
-    font-style:normal;
+    font-style: normal;
 }
 
+
 .error_link {
-    font-size: small;
+    font-size: 18px;
     font-weight: bold;
+}
+/* Ajoutez cette règle pour cacher la classe sur les écrans de bureau */
+@media screen and (min-width: 601px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .error_img {
+        width: 180px; /* Réduire la largeur de l'image */
+        height: auto; /* Hauteur ajustée automatiquement */
+        margin-bottom: 90px; /* Réduire l'espacement en bas de l'image */
+    }
+    
+    .error_text {
+        font-size: 18px; /* Réduire la taille du texte */
+        margin-bottom: 60px; /* Réduire l'espacement en bas du texte */
+        white-space: pre-line; /* Permettre le retour à la ligne */
+    }
+
+    .error_link {
+        margin-top: 50px;
+        font-size: 16px;
+        font-weight: bold;
+    }
 }

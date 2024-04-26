@@ -3,11 +3,11 @@
 .collapse-container {
     cursor: pointer;
     margin-bottom: 10px;
-    width: 80%; /* Largeur de 80% de la largeur de la fenêtre */
-    max-width: 900px; /* Largeur maximale par défaut */
+    width: 90%; /* Largeur de 100% */
+    max-width: 1400px; /* Largeur maximale par défaut */
     align-items: center;
     margin: 0 auto; 
-    padding: 10px;
+    padding: 15px; /* Augmentation de l'espace intérieur */
 }
 
 .collapse-header {
@@ -23,7 +23,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 142.6%; 
-    height: 25px;
+    height: 37px;
 }
 
 .collapse-icon {
@@ -38,19 +38,42 @@
     border: 1px solid #ccc;
     border-top: none;
     border-radius: 0 0 5px 5px;
+    max-height: 0; /* Initialisation de la hauteur à 0 */
+    overflow: hidden; /* Masquer le contenu qui dépasse */
+    transition: max-height 0.5s cubic-bezier(0.42, 0, 0.58, 1); /* Ajout de la transition avec une fonction d'accélération */
+    animation-name: openCollapse; /* Nom de l'animation */
+    animation-duration: 3s; /* Durée de l'animation */
+}
+
+.collapse-container.open .collapse-content {
+    max-height: 2000px; /* Définir une hauteur suffisamment grande pour le contenu ouvert */
 }
 
 .rotate-up {
-    transform: rotate(180deg); /* Rotation vers le haut */
-}
-
-.rotate-down {
     transform: rotate(0deg); /* Rotation vers le bas */
 }
 
-.equipment {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    margin: 2px !important;
+.rotate-down {
+    transform: rotate(180deg); /* Rotation vers le haut */
 }
 
+@keyframes openCollapse {
+    from {
+        max-height: 0; /* Début de l'animation avec une hauteur nulle */
+    }
+    to {
+        max-height: 2000px; /* Fin de l'animation avec une hauteur suffisamment grande */
+    }
+}
+
+@media (max-width: 680px) {
+    .collapse-header {
+        height: 25px; /* Réduire la hauteur de l'en-tête */
+        font-size: 16px; /* Réduire la taille de la police */
+    }
+
+    .collapse-content {
+        padding: 5px; /* Réduire l'espace intérieur du contenu */
+        font-size: 14px; /* Réduire la taille de la police du contenu */
+    }
+}

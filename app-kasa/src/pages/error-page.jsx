@@ -7,7 +7,10 @@ const Error = () => {
     return (
         <section className='section_error'>
             <img className='error_img' src={ErrorImage} alt='error 404' />
-            <p className='error_text'>Oups! La page que vous demandez n'existe pas.</p>
+            <p className='error_text'>
+                Oups! La page que <span className="mobile-only"><br /> </span>
+                vous demandez n'existe pas.
+            </p>
             <Link className='error_link' to='/'>
                 Retourner sur la page d'accueil
             </Link>

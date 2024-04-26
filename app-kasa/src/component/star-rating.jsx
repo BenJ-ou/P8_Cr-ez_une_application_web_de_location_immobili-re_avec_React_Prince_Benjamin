@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/stars.css'; // Importer le fichier CSS
 
 const StarRating = ({ initialRating, onRatingChange }) => {
     const [rating, setRating] = useState(initialRating);
@@ -16,7 +17,7 @@ const StarRating = ({ initialRating, onRatingChange }) => {
             {[...Array(1)].map((_, index) => (
                 <span
                     key={index}
-                    className={index < rating ? 'star active' : 'star'}
+                    className={index < rating ? 'star active' : 'star'} 
                     onClick={() => handleClick(index)}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" width="196" height="36" viewBox="0 0 196 36" fill="none">
