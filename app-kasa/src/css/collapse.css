@@ -7,7 +7,7 @@
     max-width: 1400px; /* Largeur maximale par défaut */
     align-items: center;
     margin: 0 auto; 
-    padding: 15px; /* Augmentation de l'espace intérieur */
+    padding: 15px;
 }
 
 .collapse-header {
@@ -67,6 +67,16 @@
 }
 
 @media (max-width: 680px) {
+
+    .collapse-container {
+        cursor: pointer;
+        margin-bottom: 10px;
+        width: 90%; /* Largeur de 100% */
+        max-width: 330px; /* Largeur maximale par défaut */
+        align-items: center;
+        margin: 0 auto; 
+        padding: 15px;
+    }
     .collapse-header {
         height: 25px; /* Réduire la hauteur de l'en-tête */
         font-size: 16px; /* Réduire la taille de la police */
